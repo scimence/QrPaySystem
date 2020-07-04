@@ -1,0 +1,594 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{1975DF92-9F48-45E1-A832-B6C3395EE3FC}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>QrPaySystem</RootNamespace>
+    <AssemblyName>QrPaySystem</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="AspNet.ScriptManager.jQuery">
+      <HintPath>..\packages\AspNet.ScriptManager.jQuery.1.7.1\lib\net40\AspNet.ScriptManager.jQuery.dll</HintPath>
+    </Reference>
+    <Reference Include="AspNet.ScriptManager.jQuery.UI.Combined">
+      <HintPath>..\packages\AspNet.ScriptManager.jQuery.UI.Combined.1.8.20\lib\net40\AspNet.ScriptManager.jQuery.UI.Combined.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=4.4.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net40\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Providers, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <HintPath>..\packages\Microsoft.AspNet.Providers.Core.1.1\lib\net40\System.Web.Providers.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\DotNetOpenAuth.Core.4.0.3.12153\lib\net40-full\DotNetOpenAuth.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.OAuth, Version=4.0.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\DotNetOpenAuth.OAuth.Core.4.0.3.12153\lib\net40-full\DotNetOpenAuth.OAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.OAuth.Consumer, Version=4.0.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\DotNetOpenAuth.OAuth.Consumer.4.0.3.12153\lib\net40-full\DotNetOpenAuth.OAuth.Consumer.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.OpenId, Version=4.0.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\DotNetOpenAuth.OpenId.Core.4.0.3.12153\lib\net40-full\DotNetOpenAuth.OpenId.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.OpenId.RelyingParty, Version=4.0.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\DotNetOpenAuth.OpenId.RelyingParty.4.0.3.12153\lib\net40-full\DotNetOpenAuth.OpenId.RelyingParty.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.AspNet, Version=4.0.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\DotNetOpenAuth.AspNet.4.0.3.12153\lib\net40-full\DotNetOpenAuth.AspNet.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Membership.OpenAuth, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <HintPath>..\packages\Microsoft.AspNet.Membership.OpenAuth.1.0.0\lib\net40\Microsoft.AspNet.Membership.OpenAuth.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="boc\BankOnlineRegister.aspx" />
+    <Content Include="boc\regsuccess.aspx" />
+    <Content Include="Default.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="PageHB\GetHB.aspx" />
+    <Content Include="PageHB\HB2.aspx" />
+    <Content Include="PageHB\HB1.aspx" />
+    <Content Include="PageHB\HB.aspx" />
+    <Content Include="PageHB\HbPay2.aspx" />
+    <Content Include="PageHB\HbPay3.aspx" />
+    <Content Include="PageHB\HB_pre.aspx" />
+    <Content Include="PageHB\HbInfo.aspx" />
+    <Content Include="PageHB\HbPay.aspx" />
+    <Content Include="PageHB\PicHB.aspx" />
+    <Content Include="PageHB\Redirect.aspx" />
+    <Content Include="PageHB\ShowInfo.aspx" />
+    <Content Include="PageSoft\AliUserId.aspx" />
+    <Content Include="PageSoft\MailTool.aspx" />
+    <Content Include="PageSoft\MySoft.aspx" />
+    <Content Include="Pages\Browser.aspx" />
+    <Content Include="Pages\Cashier.aspx" />
+    <Content Include="PageHB\CWJ.aspx" />
+    <Content Include="PageHB\Jump.aspx" />
+    <Content Include="Pages\MiniDialogInfo.aspx" />
+    <Content Include="Pages\MiniNeverForget.aspx" />
+    <Content Include="Pages\Notify.aspx" />
+    <Content Include="Pages\OnlineCode.aspx" />
+    <Content Include="Pages\OnlineSerial.aspx" />
+    <Content Include="Pages\Order.aspx" />
+    <Content Include="Pages\Pay.aspx" />
+    <Content Include="Pages\pic.aspx" />
+    <Content Include="Pages\Product.aspx" />
+    <Content Include="Pages\ProductInfo.aspx" />
+    <Content Include="Pages\ProductPay.aspx" />
+    <Content Include="Pages\SoftReg.aspx" />
+    <Content Include="Pages\UserRewards.aspx" />
+    <Content Include="Pages\UserWithdraw.aspx" />
+    <Content Include="Pages\QRTool.aspx" />
+    <Content Include="Pages\Request.aspx" />
+    <Content Include="Pages\SoftInfo.aspx" />
+    <Content Include="Pages\Sql.aspx" />
+    <Content Include="Pages\UserWithdrawView.aspx" />
+    <Content Include="Pages\WebInfo.aspx" />
+    <Content Include="Pages\UserAgent.aspx" />
+    <Content Include="PayFor\Hoder.aspx" />
+    <Content Include="PayFor\SDK.aspx" />
+    <Content Include="PayFor\RefundPass.aspx" />
+    <Content Include="PayFor\UserInfo.aspx" />
+    <Content Include="PayFor\UserLogin.aspx" />
+    <Content Include="PayFor\UserRegister.aspx" />
+    <Content Include="P\R.aspx" />
+    <Content Include="Styles\stylesSheet.css" />
+    <Content Include="Web.config" />
+    <Content Include="WebForm1.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="boc\BankOnlineRegister.aspx.cs">
+      <DependentUpon>BankOnlineRegister.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="boc\BankOnlineRegister.aspx.designer.cs">
+      <DependentUpon>BankOnlineRegister.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="boc\regsuccess.aspx.cs">
+      <DependentUpon>regsuccess.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="boc\regsuccess.aspx.designer.cs">
+      <DependentUpon>regsuccess.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="PageHB\GetHB.aspx.cs">
+      <DependentUpon>GetHB.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PageHB\GetHB.aspx.designer.cs">
+      <DependentUpon>GetHB.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PageHB\HB2.aspx.cs">
+      <DependentUpon>HB2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PageHB\HB2.aspx.designer.cs">
+      <DependentUpon>HB2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PageHB\HB.aspx.cs">
+      <DependentUpon>HB.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PageHB\HB.aspx.designer.cs">
+      <DependentUpon>HB.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PageHB\HbPay2.aspx.cs">
+      <DependentUpon>HbPay2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PageHB\HbPay2.aspx.designer.cs">
+      <DependentUpon>HbPay2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PageHB\HbPay3.aspx.cs">
+      <DependentUpon>HbPay3.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PageHB\HbPay3.aspx.designer.cs">
+      <DependentUpon>HbPay3.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PageHB\HB_pre.aspx.cs">
+      <DependentUpon>HB_pre.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PageHB\HB_pre.aspx.designer.cs">
+      <DependentUpon>HB_pre.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PageHB\HbInfo.aspx.cs">
+      <DependentUpon>HbInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PageHB\HbInfo.aspx.designer.cs">
+      <DependentUpon>HbInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PageHB\HbPay.aspx.cs">
+      <DependentUpon>HbPay.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PageHB\HbPay.aspx.designer.cs">
+      <DependentUpon>HbPay.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PageHB\PicHB.aspx.cs">
+      <DependentUpon>PicHB.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PageHB\PicHB.aspx.designer.cs">
+      <DependentUpon>PicHB.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PageHB\QrTool_HB.cs" />
+    <Compile Include="PageHB\Redirect.aspx.cs">
+      <DependentUpon>Redirect.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PageHB\Redirect.aspx.designer.cs">
+      <DependentUpon>Redirect.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PageHB\ShowInfo.aspx.cs">
+      <DependentUpon>ShowInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PageHB\ShowInfo.aspx.designer.cs">
+      <DependentUpon>ShowInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PageSoft\AliUserId.aspx.cs">
+      <DependentUpon>AliUserId.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PageSoft\AliUserId.aspx.designer.cs">
+      <DependentUpon>AliUserId.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PageSoft\MailTool.aspx.cs">
+      <DependentUpon>MailTool.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PageSoft\MailTool.aspx.designer.cs">
+      <DependentUpon>MailTool.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PageSoft\MySoft.aspx.cs">
+      <DependentUpon>MySoft.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PageSoft\MySoft.aspx.designer.cs">
+      <DependentUpon>MySoft.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Browser.aspx.cs">
+      <DependentUpon>Browser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Browser.aspx.designer.cs">
+      <DependentUpon>Browser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Cashier.aspx.cs">
+      <DependentUpon>Cashier.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Cashier.aspx.designer.cs">
+      <DependentUpon>Cashier.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PageHB\CWJ.aspx.cs">
+      <DependentUpon>CWJ.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PageHB\CWJ.aspx.designer.cs">
+      <DependentUpon>CWJ.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PageHB\Jump.aspx.cs">
+      <DependentUpon>Jump.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PageHB\Jump.aspx.designer.cs">
+      <DependentUpon>Jump.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\MiniDialogInfo.aspx.cs">
+      <DependentUpon>MiniDialogInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\MiniDialogInfo.aspx.designer.cs">
+      <DependentUpon>MiniDialogInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\MiniNeverForget.aspx.cs">
+      <DependentUpon>MiniNeverForget.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\MiniNeverForget.aspx.designer.cs">
+      <DependentUpon>MiniNeverForget.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Notify.aspx.cs">
+      <DependentUpon>Notify.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Notify.aspx.designer.cs">
+      <DependentUpon>Notify.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\OnlineCode.aspx.cs">
+      <DependentUpon>OnlineCode.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\OnlineCode.aspx.designer.cs">
+      <DependentUpon>OnlineCode.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\OnlineSerial.aspx.cs">
+      <DependentUpon>OnlineSerial.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\OnlineSerial.aspx.designer.cs">
+      <DependentUpon>OnlineSerial.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Order.aspx.cs">
+      <DependentUpon>Order.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Order.aspx.designer.cs">
+      <DependentUpon>Order.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Pay.aspx.cs">
+      <DependentUpon>Pay.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Pay.aspx.designer.cs">
+      <DependentUpon>Pay.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\pic.aspx.cs">
+      <DependentUpon>pic.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\pic.aspx.designer.cs">
+      <DependentUpon>pic.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Product.aspx.cs">
+      <DependentUpon>Product.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Product.aspx.designer.cs">
+      <DependentUpon>Product.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ProductInfo.aspx.cs">
+      <DependentUpon>ProductInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\ProductInfo.aspx.designer.cs">
+      <DependentUpon>ProductInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ProductPay.aspx.cs">
+      <DependentUpon>ProductPay.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\ProductPay.aspx.designer.cs">
+      <DependentUpon>ProductPay.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\SoftReg.aspx.cs">
+      <DependentUpon>SoftReg.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\SoftReg.aspx.designer.cs">
+      <DependentUpon>SoftReg.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\UserRewards.aspx.cs">
+      <DependentUpon>UserRewards.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\UserRewards.aspx.designer.cs">
+      <DependentUpon>UserRewards.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\UserWithdraw.aspx.cs">
+      <DependentUpon>UserWithdraw.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\UserWithdraw.aspx.designer.cs">
+      <DependentUpon>UserWithdraw.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Product_QrTool.cs" />
+    <Compile Include="Pages\QRTool.aspx.cs">
+      <DependentUpon>QRTool.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\QRTool.aspx.designer.cs">
+      <DependentUpon>QRTool.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Request.aspx.cs">
+      <DependentUpon>Request.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Request.aspx.designer.cs">
+      <DependentUpon>Request.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\SoftInfo.aspx.cs">
+      <DependentUpon>SoftInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\SoftInfo.aspx.designer.cs">
+      <DependentUpon>SoftInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Sql.aspx.cs">
+      <DependentUpon>Sql.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Sql.aspx.designer.cs">
+      <DependentUpon>Sql.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\UserWithdrawView.aspx.cs">
+      <DependentUpon>UserWithdrawView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\UserWithdrawView.aspx.designer.cs">
+      <DependentUpon>UserWithdrawView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\WebInfo.aspx.cs">
+      <DependentUpon>WebInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\WebInfo.aspx.designer.cs">
+      <DependentUpon>WebInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PayFor\Hoder.aspx.cs">
+      <DependentUpon>Hoder.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PayFor\Hoder.aspx.designer.cs">
+      <DependentUpon>Hoder.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PayFor\SDK.aspx.cs">
+      <DependentUpon>SDK.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PayFor\SDK.aspx.designer.cs">
+      <DependentUpon>SDK.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PayFor\PayForMaster.Master.cs">
+      <DependentUpon>PayForMaster.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PayFor\PayForMaster.Master.designer.cs">
+      <DependentUpon>PayForMaster.Master</DependentUpon>
+    </Compile>
+    <Compile Include="PayFor\RefundPass.aspx.cs">
+      <DependentUpon>RefundPass.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PayFor\RefundPass.aspx.designer.cs">
+      <DependentUpon>RefundPass.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PayFor\UserInfo.aspx.cs">
+      <DependentUpon>UserInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PayFor\UserInfo.aspx.designer.cs">
+      <DependentUpon>UserInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PayFor\UserLogin.aspx.cs">
+      <DependentUpon>UserLogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PayFor\UserLogin.aspx.designer.cs">
+      <DependentUpon>UserLogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PayFor\UserRegister.aspx.cs">
+      <DependentUpon>UserRegister.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PayFor\UserRegister.aspx.designer.cs">
+      <DependentUpon>UserRegister.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PayFor\UserTool.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="P\R.aspx.cs">
+      <DependentUpon>R.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="P\R.aspx.designer.cs">
+      <DependentUpon>R.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Site.Master.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.Master.designer.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Tool\AliTool.cs" />
+    <Compile Include="Tool\BaseWebPage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tool\DataBase.cs" />
+    <Compile Include="Tool\Encoder.cs" />
+    <Compile Include="Tool\FileTool.cs" />
+    <Compile Include="Tool\Locker.cs" />
+    <Compile Include="Tool\LogTool.cs" />
+    <Compile Include="Tool\MD5.cs" />
+    <Compile Include="Tool\ScTool.cs" />
+    <Compile Include="Pages\UserAgent.aspx.cs">
+      <DependentUpon>UserAgent.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\UserAgent.aspx.designer.cs">
+      <DependentUpon>UserAgent.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tool\Thread.cs" />
+    <Compile Include="WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Images\" />
+    <Folder Include="Product\" />
+    <Folder Include="Scripts\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Site.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="PayFor\PayForMaster.Master" />
+    <None Include="Properties\PublishProfiles\paySystem.pubxml" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>10797</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:39380/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

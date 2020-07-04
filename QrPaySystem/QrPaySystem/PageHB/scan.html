@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<!-- saved from url=(0065)https://myjsapi.alipay.com/alipayjsapi/device/scan/scan-demo.html -->
+<html><head lang="zh"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <title>scan</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="format-detection" content="telephone=no, email=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="./scan_files/saved_resource">
+<style>
+.demo {
+  margin: 1em 0;
+  padding: 1em 1em 2em;
+  background: #fff;
+}
+
+.demo h1 {
+  padding-left: 8px;
+  font-size: 24px;
+  line-height: 1.2;
+  border-left: 3px solid #108EE9;
+}
+
+.demo h1,
+.demo p {
+  margin: 1em 0;
+}
+
+.demo .am-button + .am-button,
+.demo .btn + .btn,
+.demo .btn:first-child {
+  margin-top: 10px;
+}
+
+.fn-hide {
+  display: none !important;
+}
+
+input {
+  display: block;
+  padding: 4px 10px;
+  margin: 10px 0;
+  line-height: 28px;
+  width: 100%;
+  box-sizing: border-box;
+}
+</style>
+</head>
+<body>
+  <div class="am-notice" id="J_envTip20161108">
+    <div class="am-notice-content">请在支付宝 App 内查看演示 :(</div>
+  </div>
+
+<script>
+function getQuery() {
+  var match;
+  var urlParams = {};
+  var pl = /\+/g;
+  var search = /([^&=]+)=?([^&]*)/g;
+  var decode = function (s) {
+    return decodeURIComponent(s.replace(pl, ' '));
+  };
+  var query = decodeURI(window.location.search.substring(1));
+
+  while (match = search.exec(query)) {
+    urlParams[decode(match[1])] = decode(match[2]);
+  }
+
+  return urlParams;
+}
+</script>
+<div class="demo">
+  <script src="./scan_files/alipayjsapi.inc.min.js"></script>
+
+<button id="J_btn_scanQR" class="btn btn-default am-button">扫一扫二维码</button>
+<button id="J_btn_scanBAR" class="btn btn-default am-button">扫一扫条形码</button>
+<script>
+  var btnScanQR = document.querySelector('#J_btn_scanQR');
+  var btnScanBAR = document.querySelector('#J_btn_scanBAR');
+  btnScanQR.addEventListener('click', function(){
+    ap.scan(function(res){
+      ap.alert(res.code);
+    });
+  });
+  btnScanBAR.addEventListener('click', function(){
+    ap.scan({
+      type: 'bar'
+    }, function(res){
+      ap.alert(res.code);
+    });
+  });
+</script>
+</div>
+<script>
+(function() {
+  var eTipElement = document.getElementById('J_envTip20161108');
+  if (!/AlipayClient/i.test(navigator.userAgent)) {
+    eTipElement.classList.remove('fn-hide');
+  }
+  if (location.href.indexOf('/en-us/') >= 0) {
+    eTipElement.querySelector('.am-notice-content').innerText = 'To run the demo, open this page in Alipay APP';
+  }
+
+  var buttons = document.querySelectorAll('.btn');
+  if (buttons.length > 0) {
+    var length = buttons.length;
+    var i = 0;
+    for (; i < length; i++) {
+      buttons[i].classList.add('am-button');
+    }
+  }
+})();
+</script>
+
+<script src="./scan_files/fastclick.min.js"></script>
+<script>window.FastClick && FastClick.attach(document.body);</script>
+
+<style>#J_cnzz ~ a {display: none}</style>
+<script src="./scan_files/z_stat.php" language="JavaScript" id="J_cnzz"></script><script src="./scan_files/core.php" charset="utf-8" type="text/javascript"></script><a href="http://www.cnzz.com/stat/website.php?web_id=1261676206" target="_blank" title="站长统计">站长统计</a>
+
+
+<div style="position: static; width: 0px; height: 0px; border: none; padding: 0px; margin: 0px;"><div id="trans-tooltip"><div id="tip-left-top" style="background: url(&quot;chrome-extension://ikkepelhgbcgmhhmcmpfkjmchccjblkd/imgs/map/tip-left-top.png&quot;);"></div><div id="tip-top" style="background: url(&quot;chrome-extension://ikkepelhgbcgmhhmcmpfkjmchccjblkd/imgs/map/tip-top.png&quot;) repeat-x;"></div><div id="tip-right-top" style="background: url(&quot;chrome-extension://ikkepelhgbcgmhhmcmpfkjmchccjblkd/imgs/map/tip-right-top.png&quot;);"></div><div id="tip-right" style="background: url(&quot;chrome-extension://ikkepelhgbcgmhhmcmpfkjmchccjblkd/imgs/map/tip-right.png&quot;) repeat-y;"></div><div id="tip-right-bottom" style="background: url(&quot;chrome-extension://ikkepelhgbcgmhhmcmpfkjmchccjblkd/imgs/map/tip-right-bottom.png&quot;);"></div><div id="tip-bottom" style="background: url(&quot;chrome-extension://ikkepelhgbcgmhhmcmpfkjmchccjblkd/imgs/map/tip-bottom.png&quot;) repeat-x;"></div><div id="tip-left-bottom" style="background: url(&quot;chrome-extension://ikkepelhgbcgmhhmcmpfkjmchccjblkd/imgs/map/tip-left-bottom.png&quot;);"></div><div id="tip-left" style="background: url(&quot;chrome-extension://ikkepelhgbcgmhhmcmpfkjmchccjblkd/imgs/map/tip-left.png&quot;);"></div><div id="trans-content"></div></div><div id="tip-arrow-bottom" style="background: url(&quot;chrome-extension://ikkepelhgbcgmhhmcmpfkjmchccjblkd/imgs/map/tip-arrow-bottom.png&quot;);"></div><div id="tip-arrow-top" style="background: url(&quot;chrome-extension://ikkepelhgbcgmhhmcmpfkjmchccjblkd/imgs/map/tip-arrow-top.png&quot;);"></div></div></body></html>

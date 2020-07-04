@@ -1,0 +1,27 @@
+﻿[2018-07-22_20:51:10_715152] SELECT * FROM 数据表1
+[2018-07-22_20:51:11_458367] SELECT * FROM 数据表1
+[2018-07-22_20:51:21_898174] SELECT * FROM 数据表1
+[2018-07-22_20:57:20_595565] SELECT * FROM 数据表1
+[2018-07-22_20:57:20_717969] SELECT * FROM 数据表1
+[2018-07-22_21:41:44_671298] SELECT * FROM 数据表1
+[2018-07-22_21:47:28_187946] SELECT * FROM 数据表1
+[2018-07-22_21:48:54_199866] SELECT * FROM 数据表1
+[2018-08-03_07:10:55_465995] SELECT * FROM 数据表1
+[2018-08-03_07:11:04_033485] TAB:SELECT * FROM 数据表1
+[2018-10-30_20:31:24_751121] TAB:SELECT * FROM UserAgent
+[2018-10-30_20:32:01_455234] TAB:SELECT * FROM HttpUserAgent
+[2018-12-24_20:55:08_598956] select * from UserInfo
+[2018-12-24_21:00:08_231709] SELECT * FROM UserInfo
+[2018-12-24_21:00:38_448659] TAB:SELECT * FROM UserInfo
+[2018-12-24_21:46:28_898835] TAB:SELECT * FROM UserInfo
+[2018-12-24_21:49:45_037817] TAB:SELECT * FROM UserInfo
+[2018-12-24_21:50:15_844153] TAB:SELECT * FROM UserInfo
+[2019-01-17_01:04:20_078406] SELECT * FROM 数据表1
+[2019-04-14_09:41:14_435356] SELECT * FROM 数据表1
+[2019-04-14_13:56:17_301008] TAB:SELECT * FROM UserInfo
+[2019-04-14_17:10:20_582725] select * from [Order] where isSuccess='True' and where ext like '%25author(test852)%25'
+[2019-04-14_17:12:28_751455] select * from [Order] where isSuccess='True' and where ext like '%25author(test852)%25'
+[2019-04-14_17:27:18_121791] update [Order] set isSuccess = 'True_Finish' where isSuccess='True' and ext like '%25author(test852)%25'
+[2019-04-14_17:27:43_124240] update [Order] set isSuccess = 'True_Finish' where isSuccess='True' and ext like '%25author(test852)%25'
+[2019-04-14_17:28:57_220191] update [Order] set isSuccess = 'True_Finish' where (isSuccess='True' and ext like '%25author(test852)%25')
+[2020-04-20_22:48:29_186605] DB=DataBase_Mini&TAB=User

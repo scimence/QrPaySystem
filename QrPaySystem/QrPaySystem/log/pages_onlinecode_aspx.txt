@@ -1,0 +1,12 @@
+﻿[2020-04-19_15:15:16_502729] TYPE=Add&machinCode=XRUM-LYKS-4R2P-QP6H&soft=easyIcon&ext=拓展参数
+[2020-04-19_15:20:49_660218] TYPE=Add&machinCode=XRUM-LYKS-4R2P-QP6H&soft=easyIcon&ext=拓展参数
+[2020-04-19_15:21:25_383234] TYPE=Add&machinCode=XRUM-LYKS-4R2P-QP6H&soft=easyIcon&ext=拓展参数
+[2020-04-19_15:21:57_186919] TYPE=Add&machinCode=2019032663709331&soft=AliUserId_aspx
+[2020-04-19_15:22:16_672577] machinCode=2019032663709331&soft=AliUserId_aspx
+[2020-04-19_15:23:18_842218] machinCode=Ali2019032663709331&soft=AliUserId_aspx
+[2020-04-19_15:23:33_085033] TYPE=Add&machinCode=Ali2019032663709331&soft=AliUserId_aspx
+[2020-04-19_15:23:39_007372] machinCode=Ali2019032663709331&soft=AliUserId_aspx
+[2020-04-19_15:32:16_087760] TYPE=Check&machinCode=2019032663709331&soft=AliUserId_aspx
+[2020-04-19_15:39:19_973993] TYPE=Check&machinCode=2019032663709331&soft=AliUserId_aspx
+[2020-04-19_15:39:39_686120] TYPE=Check&machinCode=2019032663709331&soft=AliUserId_aspx
+[2020-04-19_15:41:11_205355] TYPE=Check&machinCode=2019032663709331&soft=AliUserId_aspx

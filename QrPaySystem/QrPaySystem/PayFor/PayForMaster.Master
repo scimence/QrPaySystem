@@ -1,0 +1,78 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="PayForMaster.master.cs" Inherits="QrPaySystem.PayFor.PayForMaster" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <link href="../Styles/stylesSheet.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div style="font-family: 宋体, Arial, Helvetica, sans-serif; background-color: #4B6C9E; margin-right: auto; margin-left: auto; width: auto; height: 50px; text-align: center; padding-top: 10px;">
+            <asp:Label ID="LabelTittleName" runat="server" Font-Bold="True" Font-Italic="False" Font-Names="楷体" Font-Size="30pt" Font-Strikeout="False" ForeColor="White" Text="QrPay支付系统"></asp:Label>
+
+            <div style="width: 100px; margin-left: auto; height: 23px;">
+                <a id="LinkLogin" target="_self" href="UserLogin.aspx">
+                    <asp:Label ID="LabelLogin" runat="server" Text="登录" ForeColor="White" Font-Size="Large" Font-Underline="True"></asp:Label></a>
+
+            </div>
+        </div>
+
+        <div class="hideSkiplink">
+            <asp:Menu ID="Menu1" runat="server" CssClass="menu" Orientation="Horizontal" IncludeStyleBlock="False" EnableViewState="False">
+                <Items>
+                <asp:MenuItem Text="软件支付" Value="软件支付" NavigateUrl="~/PayFor/SDK.aspx"> </asp:MenuItem>
+                <asp:MenuItem Text="软件注册" Value="软件注册" NavigateUrl="Hoder.aspx?/Pages/SoftReg.aspx"></asp:MenuItem>
+                    <asp:MenuItem Text="付费资源" Value="付费资源" NavigateUrl="Hoder.aspx?/Pages/Product.aspx"></asp:MenuItem>
+                    <asp:MenuItem Text="个人中心" Value="个人中心">
+                        <asp:MenuItem Text="支付请求" Value="支付请求" NavigateUrl="Hoder.aspx?/Pages/Pay.aspx"></asp:MenuItem>
+                        <asp:MenuItem Text="下单详情" Value="下单详情" NavigateUrl="Hoder.aspx?/Pages/order.aspx?ShowOrder=Ali"></asp:MenuItem>
+                        <asp:MenuItem Text="收益详情" Value="收益详情" NavigateUrl="Hoder.aspx?/Pages/UserRewards.aspx"></asp:MenuItem>
+                        <asp:MenuItem Text="Cashier" Value="Cashier" NavigateUrl="Hoder.aspx?/Pages/Cashier.aspx"></asp:MenuItem>
+                        <asp:MenuItem Text="OnlineSerial" Value="OnlineSerial" NavigateUrl="Hoder.aspx?/Pages/OnlineSerial.aspx"></asp:MenuItem>
+                        <asp:MenuItem Text="OnlineCode" Value="OnlineCode" NavigateUrl="Hoder.aspx?/Pages/OnlineCode.aspx"></asp:MenuItem>
+                        <asp:MenuItem Text="Sql" Value="Sql" NavigateUrl="Hoder.aspx?/Pages/Sql.aspx"></asp:MenuItem>
+                    </asp:MenuItem>
+                    <asp:MenuItem Text="网络工具" Value="网络工具">
+                        <asp:MenuItem Text="支付宝用户id" Value="支付宝用户id" NavigateUrl="Hoder.aspx?/PageSoft/AliUserId.aspx"></asp:MenuItem>
+                        <asp:MenuItem Text="红包收款码" Value="红包收款码" NavigateUrl="Hoder.aspx?/PageHB/HB.aspx"></asp:MenuItem>
+                        <asp:MenuItem Text="制作二维码" Value="制作二维码" NavigateUrl="Hoder.aspx?/Pages/QRTool.aspx"></asp:MenuItem>
+                        <asp:MenuItem Text="发送邮件" Value="发送邮件" NavigateUrl="Hoder.aspx?/PageSoft/MailTool.aspx"></asp:MenuItem>
+                        <asp:MenuItem Text="网页信息展示" Value="网页信息展示" NavigateUrl="Hoder.aspx?/PageHB/ShowInfo.aspx"></asp:MenuItem>
+                        <asp:MenuItem Text="网址浏览器" Value="网址浏览器" NavigateUrl="Hoder.aspx?/Pages/Browser.aspx"></asp:MenuItem>
+                    </asp:MenuItem>
+                    <asp:MenuItem Text="其它功能" Value="其它功能">
+                        <asp:MenuItem Text="软件超市" Value="软件超市" NavigateUrl="Hoder.aspx?/PageSoft/MySoft.aspx"></asp:MenuItem>
+                        <asp:MenuItem Text="信息存取" Value="信息存取" NavigateUrl="Hoder.aspx?/Pages/WebInfo.aspx"></asp:MenuItem>
+                        <asp:MenuItem Text="Request请求" Value="Request请求" NavigateUrl="Hoder.aspx?/Pages/Request.aspx"></asp:MenuItem>
+                        <asp:MenuItem Text="网址重定向" Value="网址重定向" NavigateUrl="Hoder.aspx?/PageHB/Redirect.aspx"></asp:MenuItem>
+                    </asp:MenuItem>
+                </Items>
+            </asp:Menu>
+        </div>
+
+        <div>
+            <asp:ContentPlaceHolder ID="ContentBodyHoder" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+
+        <br /><br />
+
+    </form>
+
+    <div style="margin-right: auto; margin-left: auto; margin-bottom: 0px;width: auto; height: auto; background-color: #fff; ">
+        <div style="width: 300px; margin: 0 auto; padding: 20px 0;">
+            <div style="color: #939393;">
+                备案/许可证编号: <a style="color: #939393;" href="http://ah.beian.miit.gov.cn/" rel="nofollow" target="_blank">皖ICP备19005628号-2</a>
+            </div>
+            <br />
+            <a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=34010402702080" style="display: inline-block; text-decoration: none; height: 20px; line-height: 20px;">
+                <img src="../tools/site_pic/beian.png" style="float: left;" /><p style="float: left; height: 20px; line-height: 20px; margin: 0px 0px 0px 5px; color: #939393;">皖公网安备 34010402702080号</p>
+            </a>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,258 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+您 Web 项目的发布/打包进程将使用此文件。您可以通过编辑此 MSBuild 文件
+来自定义该进程的行为。若要了解与此相关的详细信息，请访问 http://go.microsoft.com/fwlink/?LinkID=208121。
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <LastUsedBuildConfiguration>Release</LastUsedBuildConfiguration>
+    <LastUsedPlatform>Any CPU</LastUsedPlatform>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <_PublishTargetUrl>C:\inetpub\QrPaySystem</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="bin/AspNet.ScriptManager.jQuery.dll">
+      <publishTime>07/22/2018 19:32:16</publishTime>
+    </File>
+    <File Include="bin/AspNet.ScriptManager.jQuery.UI.Combined.dll">
+      <publishTime>07/22/2018 19:32:16</publishTime>
+    </File>
+    <File Include="bin/DotNetOpenAuth.AspNet.dll">
+      <publishTime>07/22/2018 19:32:18</publishTime>
+    </File>
+    <File Include="bin/DotNetOpenAuth.Core.dll">
+      <publishTime>07/22/2018 19:32:16</publishTime>
+    </File>
+    <File Include="bin/DotNetOpenAuth.OAuth.Consumer.dll">
+      <publishTime>07/22/2018 19:32:17</publishTime>
+    </File>
+    <File Include="bin/DotNetOpenAuth.OAuth.dll">
+      <publishTime>07/22/2018 19:32:17</publishTime>
+    </File>
+    <File Include="bin/DotNetOpenAuth.OpenId.dll">
+      <publishTime>07/22/2018 19:32:17</publishTime>
+    </File>
+    <File Include="bin/DotNetOpenAuth.OpenId.RelyingParty.dll">
+      <publishTime>07/22/2018 19:32:17</publishTime>
+    </File>
+    <File Include="bin/EntityFramework.dll">
+      <publishTime>07/22/2018 19:32:18</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AspNet.Membership.OpenAuth.dll">
+      <publishTime>07/22/2018 19:32:19</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Web.Infrastructure.dll">
+      <publishTime>03/08/2012 09:20:10</publishTime>
+    </File>
+    <File Include="bin/QrPaySystem.dll">
+      <publishTime>06/06/2020 22:27:15</publishTime>
+    </File>
+    <File Include="bin/System.Web.Providers.dll">
+      <publishTime>07/22/2018 19:32:15</publishTime>
+    </File>
+    <File Include="bin/zh-Hans/EntityFramework.resources.dll">
+      <publishTime>07/22/2018 19:32:20</publishTime>
+    </File>
+    <File Include="bin/zh-Hans/Microsoft.AspNet.Membership.OpenAuth.resources.dll">
+      <publishTime>07/22/2018 19:32:19</publishTime>
+    </File>
+    <File Include="bin/zh-Hans/System.Web.Providers.resources.dll">
+      <publishTime>07/22/2018 19:32:19</publishTime>
+    </File>
+    <File Include="boc/BankOnlineRegister.aspx">
+      <publishTime>06/06/2020 22:14:11</publishTime>
+    </File>
+    <File Include="boc/regsuccess.aspx">
+      <publishTime>06/06/2020 22:26:08</publishTime>
+    </File>
+    <File Include="Default.aspx">
+      <publishTime>04/25/2020 17:21:41</publishTime>
+    </File>
+    <File Include="Global.asax">
+      <publishTime>07/22/2018 19:32:04</publishTime>
+    </File>
+    <File Include="P/R.aspx">
+      <publishTime>03/17/2019 15:49:28</publishTime>
+    </File>
+    <File Include="PageHB/CWJ.aspx">
+      <publishTime>10/06/2018 16:01:49</publishTime>
+    </File>
+    <File Include="PageHB/GetHB.aspx">
+      <publishTime>11/23/2018 23:53:15</publishTime>
+    </File>
+    <File Include="PageHB/HB.aspx">
+      <publishTime>11/24/2018 00:12:01</publishTime>
+    </File>
+    <File Include="PageHB/HB1.aspx">
+      <publishTime>10/05/2018 16:32:45</publishTime>
+    </File>
+    <File Include="PageHB/HB2.aspx">
+      <publishTime>10/29/2018 23:20:54</publishTime>
+    </File>
+    <File Include="PageHB/HB3.aspx">
+      <publishTime>10/29/2018 23:11:29</publishTime>
+    </File>
+    <File Include="PageHB/HbInfo.aspx">
+      <publishTime>10/03/2018 23:58:07</publishTime>
+    </File>
+    <File Include="PageHB/HbPay.aspx">
+      <publishTime>10/14/2019 15:45:55</publishTime>
+    </File>
+    <File Include="PageHB/HbPay2.aspx">
+      <publishTime>10/28/2018 13:26:05</publishTime>
+    </File>
+    <File Include="PageHB/HbPay3.aspx">
+      <publishTime>10/28/2018 13:26:22</publishTime>
+    </File>
+    <File Include="PageHB/HB_pre.aspx">
+      <publishTime>10/05/2018 16:07:09</publishTime>
+    </File>
+    <File Include="PageHB/Jump.aspx">
+      <publishTime>10/03/2018 16:58:22</publishTime>
+    </File>
+    <File Include="PageHB/Pay.aspx">
+      <publishTime>10/03/2018 19:50:48</publishTime>
+    </File>
+    <File Include="PageHB/PicHB.aspx">
+      <publishTime>11/23/2018 22:59:04</publishTime>
+    </File>
+    <File Include="PageHB/Redirect.aspx">
+      <publishTime>10/03/2018 11:51:14</publishTime>
+    </File>
+    <File Include="PageHB/ShowInfo.aspx">
+      <publishTime>10/26/2018 00:09:48</publishTime>
+    </File>
+    <File Include="Pages/Browser.aspx">
+      <publishTime>11/22/2018 22:02:25</publishTime>
+    </File>
+    <File Include="Pages/Cashier.aspx">
+      <publishTime>08/03/2018 07:23:51</publishTime>
+    </File>
+    <File Include="Pages/CWJ.aspx">
+      <publishTime>10/02/2018 20:32:23</publishTime>
+    </File>
+    <File Include="Pages/HongBao.aspx">
+      <publishTime>10/02/2018 13:56:05</publishTime>
+    </File>
+    <File Include="Pages/Jump.aspx">
+      <publishTime>10/03/2018 11:06:48</publishTime>
+    </File>
+    <File Include="Pages/MiniDialogInfo.aspx">
+      <publishTime>05/03/2019 20:19:03</publishTime>
+    </File>
+    <File Include="Pages/MiniNeverForget.aspx">
+      <publishTime>04/02/2019 21:41:25</publishTime>
+    </File>
+    <File Include="Pages/Notify.aspx">
+      <publishTime>08/03/2018 07:17:51</publishTime>
+    </File>
+    <File Include="Pages/OnlineCode.aspx">
+      <publishTime>04/19/2020 12:22:08</publishTime>
+    </File>
+    <File Include="Pages/OnlineSerial.aspx">
+      <publishTime>08/18/2018 14:52:57</publishTime>
+    </File>
+    <File Include="Pages/Order.aspx">
+      <publishTime>08/01/2018 07:11:05</publishTime>
+    </File>
+    <File Include="Pages/Pay.aspx">
+      <publishTime>04/19/2020 17:52:28</publishTime>
+    </File>
+    <File Include="Pages/pic.aspx">
+      <publishTime>11/23/2018 18:54:59</publishTime>
+    </File>
+    <File Include="Pages/Product.aspx">
+      <publishTime>04/25/2020 17:08:26</publishTime>
+    </File>
+    <File Include="Pages/ProductInfo.aspx">
+      <publishTime>10/15/2019 16:42:22</publishTime>
+    </File>
+    <File Include="Pages/ProductPay.aspx">
+      <publishTime>10/15/2019 14:00:51</publishTime>
+    </File>
+    <File Include="Pages/ProductRewards.aspx">
+      <publishTime>10/17/2019 09:05:41</publishTime>
+    </File>
+    <File Include="Pages/ProductWithdraw.aspx">
+      <publishTime>10/16/2019 15:34:31</publishTime>
+    </File>
+    <File Include="Pages/QRTool.aspx">
+      <publishTime>10/03/2018 20:35:54</publishTime>
+    </File>
+    <File Include="Pages/Request.aspx">
+      <publishTime>08/05/2018 20:06:12</publishTime>
+    </File>
+    <File Include="Pages/SoftInfo.aspx">
+      <publishTime>08/14/2018 21:38:36</publishTime>
+    </File>
+    <File Include="Pages/SoftReg.aspx">
+      <publishTime>04/25/2020 18:40:10</publishTime>
+    </File>
+    <File Include="Pages/Sql.aspx">
+      <publishTime>07/22/2018 22:06:58</publishTime>
+    </File>
+    <File Include="Pages/UserAgent.aspx">
+      <publishTime>10/30/2018 20:23:56</publishTime>
+    </File>
+    <File Include="Pages/UserRewards.aspx">
+      <publishTime>10/17/2019 14:07:56</publishTime>
+    </File>
+    <File Include="Pages/UserWithdraw.aspx">
+      <publishTime>10/17/2019 09:56:03</publishTime>
+    </File>
+    <File Include="Pages/UserWithdrawView.aspx">
+      <publishTime>10/17/2019 16:58:35</publishTime>
+    </File>
+    <File Include="Pages/WebInfo.aspx">
+      <publishTime>07/22/2018 22:00:08</publishTime>
+    </File>
+    <File Include="PageSoft/AliUserId.aspx">
+      <publishTime>04/19/2020 18:15:25</publishTime>
+    </File>
+    <File Include="PageSoft/MailTool.aspx">
+      <publishTime>04/18/2020 11:44:17</publishTime>
+    </File>
+    <File Include="PageSoft/MySoft.aspx">
+      <publishTime>11/27/2018 21:36:17</publishTime>
+    </File>
+    <File Include="PayFor/Hoder.aspx">
+      <publishTime>04/14/2019 09:42:06</publishTime>
+    </File>
+    <File Include="PayFor/NotePage.aspx">
+      <publishTime>12/23/2018 18:18:47</publishTime>
+    </File>
+    <File Include="PayFor/PayForMaster.Master">
+      <publishTime>04/25/2020 17:18:10</publishTime>
+    </File>
+    <File Include="PayFor/RefundPass.aspx">
+      <publishTime>12/30/2018 17:04:48</publishTime>
+    </File>
+    <File Include="PayFor/SDK.aspx">
+      <publishTime>04/25/2020 17:30:19</publishTime>
+    </File>
+    <File Include="PayFor/UserInfo.aspx">
+      <publishTime>04/15/2019 21:52:37</publishTime>
+    </File>
+    <File Include="PayFor/UserLogin.aspx">
+      <publishTime>10/17/2019 15:54:58</publishTime>
+    </File>
+    <File Include="PayFor/UserRegister.aspx">
+      <publishTime>12/30/2018 17:04:34</publishTime>
+    </File>
+    <File Include="Site.Master">
+      <publishTime>07/22/2018 19:48:26</publishTime>
+    </File>
+    <File Include="Styles/stylesSheet.css">
+      <publishTime>04/14/2019 09:45:28</publishTime>
+    </File>
+    <File Include="UserAgent.aspx">
+      <publishTime>10/30/2018 20:23:56</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>06/06/2020 22:27:15</publishTime>
+    </File>
+    <File Include="WebForm1.aspx">
+      <publishTime>07/22/2018 22:57:31</publishTime>
+    </File>
+  </ItemGroup>
+</Project>
